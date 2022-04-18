@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_const
 
+import 'package:book_app/widgets/cards_items.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,12 +31,31 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
-      body: Center(
-        child: Container(
-          height: 150,
-          width: 150,
-          color: Colors.green,
-          //child: Image.asset("images/science.png"),
+      body: SingleChildScrollView(
+        child: GridView.count(
+          crossAxisCount: 2,
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          children: [
+            Card(
+              child: CardItems(),
+            ),
+            Card(
+              child: Container(
+                color: Colors.blue,
+              ),
+            ),
+            Card(
+              child: Container(
+                color: Colors.red,
+              ),
+            ),
+            Card(
+              child: Container(
+                color: Colors.orangeAccent,
+              ),
+            ),
+          ],
         ),
       ),
     );
