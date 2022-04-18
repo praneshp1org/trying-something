@@ -1,4 +1,6 @@
-import 'package:book_app/widgets/cards.dart';
+import 'dart:html';
+
+import 'package:book_app/card_model.dart';
 import 'package:flutter/material.dart';
 
 class BodyItem extends StatefulWidget {
@@ -9,6 +11,7 @@ class BodyItem extends StatefulWidget {
 }
 
 class _BodyItemState extends State<BodyItem> {
+  List<CardModel> cards = [CardModel("images/science.png", "Science")];
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -17,9 +20,7 @@ class _BodyItemState extends State<BodyItem> {
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         children: [
-          Cards(),
-          Cards(),
-          Cards(),
+          Text(""),
         ],
       ),
     );
