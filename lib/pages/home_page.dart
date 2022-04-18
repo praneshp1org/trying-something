@@ -1,6 +1,5 @@
 // ignore_for_file: unnecessary_const
 
-import 'package:book_app/widgets/body_item.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,7 +30,14 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
-      body: BodyItem(),
+      body: Center(
+        child: Container(
+          height: 150,
+          width: 150,
+          color: Colors.green,
+          //child: Image.asset("images/science.png"),
+        ),
+      ),
     );
   }
 }
