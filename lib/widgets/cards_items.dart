@@ -15,29 +15,25 @@ class _CardItemsState extends State<CardItems> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: [
-          ListView.builder(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: cardsItems.length,
-              itemBuilder: ((context, index) {
-                return Center(
-                  child: Column(
-                    //crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        cardsItems[index].image,
-                        width: 80,
-                      ),
-                      Text("Science"),
-                    ],
+      child: ListView.builder(
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          itemCount: cardsItems.length,
+          itemBuilder: ((context, index) {
+            return Center(
+              child: Column(
+                //crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    cardsItems[index].image,
+                    width: 80,
                   ),
-                );
-              }))
-        ],
-      ),
+                  Text("Science"),
+                ],
+              ),
+            );
+          })),
     );
   }
 }
