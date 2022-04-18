@@ -10,22 +10,17 @@ class Dynamic extends StatefulWidget {
 class _DynamicState extends State<Dynamic> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      /** Chip Widget **/
-      child: Chip(
-        elevation: 20,
-        padding: EdgeInsets.all(8),
-        backgroundColor: Colors.greenAccent[100],
-        shadowColor: Colors.black,
+    return Scaffold(
+      body: Center(
+          /** Chip Widget **/
+          child: Chip(
         avatar: CircleAvatar(
-          backgroundImage: NetworkImage(
-              "https://pbs.twimg.com/profile_images/1304985167476523008/QNHrwL2q_400x400.jpg"), //NetwordImage
-        ), //CircleAvatar
-        label: Text(
-          'GeeksforGeeks',
-          style: TextStyle(fontSize: 20),
-        ), //Text
-      ), //Chip
+          backgroundColor: Colors.grey.shade800,
+          child: const Text('AB'),
+        ),
+        label: const Text('Aaron Burr'),
+      ) //Chip
+          ),
     );
   }
 }
