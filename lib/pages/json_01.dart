@@ -18,7 +18,8 @@ class _JSON01State extends State<JSON01> {
 
   //Future
   Future fetchData() async {
-    url = Uri.parse("https://jsonplaceholder.typicode.com/posts");
+    url = Uri.parse(
+        "https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=1");
 
     response = await http.get(url);
     setState(() {
@@ -48,8 +49,8 @@ class _JSON01State extends State<JSON01> {
               itemCount: data.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(data[index]['title']),
-                  subtitle: Text(data[index]['body']),
+                  title: Text(data[index]['country']),
+                  //subtitle: Text(data[index]['timeline']),
                   //trailing: Text(data[index]['id']),
                 );
               },
