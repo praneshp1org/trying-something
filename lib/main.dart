@@ -2,6 +2,7 @@ import 'package:book_app/pages/custom_nav.dart';
 import 'package:book_app/pages/dynamic_wrapped.dart';
 import 'package:book_app/pages/home_page.dart';
 import 'package:book_app/pages/json_01.dart';
+import 'package:book_app/pages/json_011.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       routes: {
-        "/": (_) => JSON01(),
+        "/": (_) => JSON011(),
       },
     );
   }
