@@ -53,6 +53,7 @@ class _JSON02State extends State<JSON02> {
                     ),
                     Text(comment[index].email),
                     Text(comment[index].body),
+                    Divider(),
                   ],
                 );
               },
