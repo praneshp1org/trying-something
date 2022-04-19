@@ -18,7 +18,8 @@ class _JSON01State extends State<JSON01> {
 
   //Future
   Future fetchData() async {
-    url = 'https://jsonplaceholder.typicode.com/posts';
+    url = Uri.parse("https://jsonplaceholder.typicode.com/posts");
+
     response = await http.get(url);
     setState(() {
       data = convert.jsonDecode(response.body);
@@ -39,7 +40,7 @@ class _JSON01State extends State<JSON01> {
       appBar: AppBar(
         title: Text('JSON Serialization'),
       ),
-      body: isLoading
+      body: (isLoading == true)
           ? Center(
               child: CircularProgressIndicator(),
             )
@@ -48,7 +49,8 @@ class _JSON01State extends State<JSON01> {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(data[index]['title']),
-                  subtitle: Text(data[index]['id']),
+                  subtitle: Text(data[index]['body']),
+                  //trailing: Text(data[index]['id']),
                 );
               },
             ),
