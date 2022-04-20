@@ -1,3 +1,4 @@
+import 'package:book_app/pages/YTJSON.dart';
 import 'package:book_app/pages/custom_nav.dart';
 import 'package:book_app/pages/dynamic_wrapped.dart';
 import 'package:book_app/pages/home_page.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       routes: {
-        "/": (_) => JSON02(),
+        "/": (_) => YTJSON(),
       },
     );
   }
