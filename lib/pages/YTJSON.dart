@@ -39,7 +39,9 @@ class _YTJSONState extends State<YTJSON> {
           title: Text('JSON Parsing'),
         ),
         body: (isLoading == true)
-            ? Center(child: CircularProgressIndicator())
+            ? Center(
+                child: CircularProgressIndicator(),
+              )
             : ListView.builder(
                 itemCount: data.length,
                 itemBuilder: (context, index) {
