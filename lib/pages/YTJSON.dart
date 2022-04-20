@@ -17,7 +17,7 @@ class _YTJSONState extends State<YTJSON> {
 
   //future
   Future fetchData() async {
-    url = Uri.parse("https://jsonplaceholder.typicode.com/posts");
+    url = Uri.parse("https://jsonplaceholder.typicode.com/comments");
     response = await http.get(url);
     setState(() {
       data = convert.jsonDecode(response.body);
@@ -46,8 +46,8 @@ class _YTJSONState extends State<YTJSON> {
                 itemCount: data.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(data[index]['title']),
-                    subtitle: Text(data[index]['body']),
+                    title: Text(data[index]['name']),
+                    subtitle: Text(data[index]['email']),
                   );
                 },
               ));
