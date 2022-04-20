@@ -47,20 +47,23 @@ class _JSONNewState extends State<JSONNew> {
             : ListView.builder(
                 itemCount: data.length,
                 itemBuilder: (context, index) {
-                  return Card(
-                    elevation: 10,
-                    child: Container(
-                      //height: 150,
-                      width: MediaQuery.of(context).size.width,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ListTile(
-                            title: Text(comment2[index].name),
-                            subtitle: Text(comment2[index].email),
-                          ),
-                          Text(comment2[index].body)
-                        ],
+                  return Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Card(
+                      elevation: 10,
+                      child: Container(
+                        //height: 150,
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ListTile(
+                              title: Text(comment2[index].name),
+                              subtitle: Text(comment2[index].email),
+                            ),
+                            Text(comment2[index].body)
+                          ],
+                        ),
                       ),
                     ),
                   );
