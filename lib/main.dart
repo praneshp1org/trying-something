@@ -5,6 +5,7 @@ import 'package:book_app/pages/home_page.dart';
 import 'package:book_app/pages/json_01.dart';
 import 'package:book_app/pages/json_011.dart';
 import 'package:book_app/pages/json_02.dart';
+import 'package:book_app/pages/json_new.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       routes: {
-        "/": (_) => YTJSON(),
+        "/": (_) => JSONNew(),
       },
     );
   }
